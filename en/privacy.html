@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>Privacy Policy – Second Chance</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="index.html">Second <b>Chance</b></a>
+  <nav>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="imprint.html">Imprint</a>
+  </nav>
+</header>
+<p class="langbar">Language: <a href="../datenschutz.html">Deutsch</a> · <strong>English</strong></p>
+
+<main class="wrap">
+  <h1>Privacy Policy</h1>
+  <p class="meta">As of: 12 November 2026 · Version 1.2</p>
+  <p class="note">This is a convenience translation. The authoritative version is the
+  <a href="../datenschutz.html">German Datenschutzerklärung</a>; in case of any discrepancy, the German text prevails.</p>
+
+  <p class="lede">Second Chance is a free, ad-free iOS app that shows “zu verschenken” (free giveaway) boxes left on the
+  street in Aachen on a map. This policy explains which personal data is processed, on what legal basis, and for how long.
+  It is deliberately short and honest: nothing is promised that the app does not actually do.</p>
+
+  <h2>1. Controller</h2>
+  <div class="panel">
+    <p>Pablo Dibildox<br>
+    Hauptstraße 76<br>
+    52066 Aachen<br>
+    Germany</p>
+    <p>Email: <a href="mailto:sec0nd.chance.app.mine@gmail.com">sec0nd.chance.app.mine@gmail.com</a></p>
+  </div>
+  <p>There is no separate data protection officer; there is no legal obligation to appoint one for this service. For any
+  privacy question, please use the email address above.</p>
+
+  <h2>2. Overview: what the app deliberately does <em>not</em> do</h2>
+  <ul>
+    <li>No advertising, no tracking, no analytics or crash-reporting SDKs (no Firebase, Sentry, Crashlytics, Mixpanel,
+      no IDFA, no App Tracking Transparency dialog).</li>
+    <li>No name and no email from “Sign in with Apple” (no scopes are requested, so Apple shares neither name nor email).</li>
+    <li>No location history is stored.</li>
+    <li>No prices, no item names, no chat between users.</li>
+    <li>The identity of anyone who posted, confirmed or reported a box is never shown to other users.</li>
+  </ul>
+
+  <h2>3. Accounts: anonymous, and optionally with Apple</h2>
+  <p>On first launch the app silently creates an <strong>anonymous account</strong> (a random identifier/UUID at our
+  processor Supabase). Without signing in and without a name, you can browse the map, confirm boxes (“still has items” /
+  “empty”), record a take, create saved searches and receive notifications.</p>
+  <p>Only to <strong>post a box yourself</strong> is “Sign in with Apple” required. This links an Apple identity to your
+  existing anonymous account in place (same id, points and history). Apple shares only an anonymous Apple user identifier
+  with us — <strong>no name and no email</strong>.</p>
+  <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR (providing the functions you use / performing the user relationship).</p>
+
+  <h2>4. Processing in detail</h2>
+  <p>For each processing we state the purpose, the data involved and the legal basis.</p>
+
+  <h3>4.1 Showing the map</h3>
+  <p><strong>Purpose:</strong> display the map and boxes. Map tiles are loaded from the provider OpenFreeMap (section 6);
+  this necessarily sends your IP address to that provider and requests the map area shown.<br>
+  <strong>Legal basis:</strong> Art. 6(1)(b) GDPR (providing the map) and Art. 6(1)(f) GDPR (legitimate interest in a
+  working map).</p>
+  <p>OpenFreeMap is operated by <strong>Hyperknot Software Kft. (Hungary, EU)</strong>; delivery is via dedicated servers,
+  partly through Cloudflare as a content delivery network (CDN). According to its own information, OpenFreeMap stores
+  <strong>no IP addresses in its access logs</strong>; IP addresses may be kept in error logs for up to 7 days and, during
+  a security incident, for up to 30 days. OpenFreeMap is based in the EU, so there is no third-country transfer here.</p>
+
+  <h3>4.1a Place search and addresses</h3>
+  <p><strong>Purpose:</strong> finding places and addresses. When you type in the map search field, your input is sent to
+  Apple (MapKit, <code>MKLocalSearch</code>) for a place search. When posting, the box coordinate is passed to Apple to
+  determine the street name (reverse geocoding); when you tap “Route”, the coordinate is passed to the Maps app.<br>
+  <strong>Legal basis:</strong> Art. 6(1)(b) GDPR.</p>
+
+  <h3>4.2 Location</h3>
+  <p>The app uses your location <strong>only while in use</strong> (“When In Use”, iOS permission), for three things:
+  centring the map on you, determining the box location when posting, and checking you are actually <em>on site</em> for a
+  confirmation or take (≤ 100 m, accuracy ≤ 65 m).</p>
+  <ul>
+    <li><strong>What is stored:</strong> when posting, the <em>box coordinate</em> (which is public — that is the point of
+      the app). For map centring and the on-site check, your location is <strong>not</strong> stored on the server; the
+      coordinate of a confirmation/take is passed to the server only for the check and is <strong>not</strong> kept.</li>
+    <li><strong>What does not happen:</strong> no location history is stored and your location is shared with no one. The
+      “Always” location permission is <strong>not</strong> requested in this version.</li>
+    <li>On the device, a confirmation/take not yet uploaded (e.g. offline) may briefly sit in a local queue (incl. the
+      on-site coordinate); that entry is deleted as soon as the action has been processed. It leaves the device only as the
+      check request described above.</li>
+  </ul>
+  <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR (map centring, posting, on-site check as core functions) and
+  Art. 6(1)(f) GDPR (legitimate interest in preventing abuse/manipulation of the on-site check).</p>
+
+  <h3>4.3 Box photos — including photos with third parties</h3>
+  <p>When posting you take a photo of the box with the in-app camera. Such a photo may unintentionally show a passer-by, a
+  vehicle number plate or a doorbell/name plate — all of which are personal data.</p>
+  <ul>
+    <li><strong>Masking on the device before upload:</strong> right after the shutter, the app detects faces, people and
+      plate-like text lines on the device (Apple Vision) and covers those regions <strong>opaquely</strong> (no blur, no
+      fine pixelation that could be reversed). Beforehand, you can cover further regions yourself.</li>
+    <li><strong>Only the masked photo is uploaded.</strong> The unmasked original stays in the device’s memory only; it is
+      never written to disk, a cache, the photo library, logs or crash reports, and is discarded when the flow ends or is
+      cancelled.</li>
+    <li><strong>Metadata:</strong> all EXIF data (especially GPS) is removed before upload; the photo is resized/compressed
+      on the device.</li>
+    <li><strong>Where the photo lives:</strong> the masked photo is stored in a public store (“box-photos” at Supabase, EU
+      region Frankfurt) and is visible to everyone via the map. This is intended — a box photo is meant to be public.</li>
+  </ul>
+  <p><strong>Legal basis:</strong> for publishing the (masked) box photo and processing any third-party data remaining
+  despite masking: Art. 6(1)(f) GDPR (legitimate interest in operating the giveaway-map service, balanced against the rights
+  of third parties, with on-device masking, EXIF removal and fast removal on report as the safeguards). For providing your
+  own contribution: Art. 6(1)(b) GDPR.</p>
+  <p class="note">Note on automatic masking: detection and covering run automatically on your device. It is a safeguard,
+  not a decision producing legal effects concerning you (no automated individual decision under Art. 22 GDPR, no profiling).
+  Detection cannot catch every case; it is deliberately tuned to over- rather than under-mask.</p>
+
+  <h3>4.4 Contributions: confirmations and takes</h3>
+  <p><strong>Purpose:</strong> keep the map current (how fresh a box is, whether it is empty). We store the fact of a
+  confirmation (“still has items”/“empty”) or a take, linked to your account id and the time — <strong>not</strong> the tap
+  coordinate (see 4.2). These entries are not visible to other users; they feed the display only in aggregate.<br>
+  <strong>Legal basis:</strong> Art. 6(1)(b) GDPR.</p>
+
+  <h3>4.5 Saved searches</h3>
+  <p><strong>Purpose:</strong> you create a saved search (categories + a centre + a radius) to be told when a matching box
+  appears. The centre is a coordinate you pick and may be sensitive (e.g. near your home). It is stored only in your own
+  account and read server-side solely to match new boxes.<br>
+  <strong>Legal basis:</strong> Art. 6(1)(b) GDPR.</p>
+
+  <h3>4.6 Push notifications</h3>
+  <p>If you allow notifications, the app registers a device token with Apple Push Notification service (APNs) and stores it
+  at Supabase. When a box matching one of your saved searches appears, a server function sends a notification via APNs. Its
+  text contains only a category and a rounded distance (e.g. “Bücher in 300 m”) — never the poster’s identity, no
+  exact coordinates and no item names.</p>
+  <p>You only receive push notifications if you <strong>(1)</strong> allow notifications for the app in iOS
+  <strong>and (2)</strong> create a saved search yourself; you can withdraw or delete either at any time.</p>
+  <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR (delivering the saved-search matches you set up). Delivery also requires
+  your iOS system permission for notifications, which you can revoke at any time in iOS Settings, ending delivery. A token
+  reported invalid by APNs is deleted.</p>
+
+  <h3>4.7 Reports and moderation</h3>
+  <p>You can report a box or photo (reason + optional note). A privacy report (reason: people, plates or names visible)
+  hides the photo immediately and moves it to a private quarantine store. We review every report (target: within 48 hours)
+  and decide: restore the photo, delete the photo (box stays), remove the box, or block the poster. The decision is recorded
+  on the report.</p>
+  <p>For your in-app report we store the reason, the note, your account id, the time and the decision. To the poster your
+  report is anonymous.</p>
+  <p>People <strong>without</strong> the app can report content via the <strong>contact form</strong> on the website
+  (<a href="index.html#kontakt">form</a>). In that case we store the <strong>contact email</strong> they provide (so we
+  can reply), the <strong>reason</strong>, a <strong>description</strong>, — if given — the <strong>street/location</strong>
+  of the box, and <strong>optionally a name</strong> (to state the notifier under Art. 16(2) of the Digital Services Act;
+  giving a name is voluntary). For abuse prevention we also briefly process a per-email count and a <strong>salted hash
+  (SHA-256) of the IP address</strong> (the IP address itself is not stored). The form sets no cookies and embeds no third
+  parties; the submission goes directly to our server function at Supabase (EU, Frankfurt). These form reports (including a
+  name if given) are kept for the review/audit trail; the abuse count/IP hash is deleted after at most 2 days.</p>
+  <p><strong>Legal basis:</strong> Art. 6(1)(c) GDPR (notice-and-action under Art. 16 of the Digital Services Act) and
+  Art. 6(1)(f) GDPR (legitimate interest in removing infringing content and protecting third parties; for the contact email,
+  also to answer the report).</p>
+
+  <h3>4.8 Hiding a poster</h3>
+  <p>You can hide boxes from a particular poster. Technically a pair of your account id and the other person’s
+  (server-resolved) account id is stored; you never learn who the person is.<br>
+  <strong>Legal basis:</strong> Art. 6(1)(b) and (f) GDPR.</p>
+
+  <h3>4.9 Points, settings, language</h3>
+  <p>Your account also holds: contribution points (a game element), your notification settings, the accepted posting-rules
+  version and your language/locale (so notifications arrive in the right language). These are tied to your account only.<br>
+  <strong>Legal basis:</strong> Art. 6(1)(b) GDPR.</p>
+
+  <h3>4.10 Feedback</h3>
+  <p><strong>Purpose:</strong> via “Feedback” (Profile) you can send us a short message with an idea, a problem or praise;
+  an email address for a reply is optional. We store the topic, your message, the optional contact email, a technical
+  context (app version, iOS version, device model and language) and your account id. The device model is the
+  <strong>hardware identifier</strong> (e.g. “iPhone16,1”), <strong>not</strong> your device name. The account id serves a
+  daily limit and ensures your feedback is deleted together with your account. Your feedback is visible only to the
+  operator; it is shown to no one and not forwarded by email.<br>
+  <strong>Legal basis:</strong> Art. 6(1)(f) GDPR (legitimate interest in improving the app and answering your message);
+  the optional email address you provide voluntarily.<br>
+  <strong>Retention:</strong> 12 months; deleted together with your account.</p>
+
+  <h2>5. Source and disclosure: third-party photos</h2>
+  <p>We partly process data not provided by you: namely people or vehicles that might unintentionally appear on a box photo
+  (Art. 14 GDPR). Such data — if it escapes the automatic and manual masking — is shown on the public map. We counter this
+  with on-device masking before upload, EXIF removal and fast removal on report (section 4.7). Affected third parties may
+  contact us at any time (section 1) or report the content (website home page); we remove affected photos.</p>
+  <p>Individually notifying such incidentally depicted people is impossible for us, or possible only with disproportionate
+  effort (we do not know their identity or contact details); we therefore rely on <strong>Art. 14(5)(b) GDPR</strong> and
+  instead make this information publicly available and remove affected photos promptly on report.</p>
+
+  <h2>6. Recipients and processors</h2>
+  <div class="scroll">
+  <table>
+    <tr><th>Recipient</th><th>Role</th><th>What is transmitted</th><th>Location / region</th></tr>
+    <tr><td>Supabase (Supabase Inc.)</td><td>Processor (hosting: database, auth, storage, server functions)</td><td>All server-side data in this policy</td><td>EU region Frankfurt (eu-central-1); company seat USA</td></tr>
+    <tr><td>Apple (Apple Inc. / Apple Distribution International)</td><td>Independent controller or service provider, depending on the feature</td><td>“Sign in with Apple” (anonymous id); push via APNs (device token + text); place search (typed query) and reverse geocoding/routing (coordinate)</td><td>USA / EU</td></tr>
+    <tr><td>OpenFreeMap (Hyperknot Software Kft.)</td><td>Third party (map tile provider); possibly Cloudflare as CDN</td><td>IP address and the map area shown when loading tiles</td><td>EU (Hungary)</td></tr>
+    <tr><td>GitHub (GitHub, Inc. / Microsoft)</td><td>Third party (hosting this website)</td><td>Website visitors’ IP address in server logs</td><td>USA</td></tr>
+  </table>
+  </div>
+  <p>A <strong>data processing agreement (DPA) under Art. 28 GDPR</strong> is in place with Supabase as processor; it is
+  incorporated into Supabase’s Terms of Service as a data-processing addendum (no separately signed contract exists).
+  Supabase engages sub-processors within the scope of the DPA. The data is processed in the EU (Frankfurt). The app
+  contains no third-party advertising, analytics or tracking services.</p>
+
+  <h2>7. Transfers to third countries</h2>
+  <p>Some recipients are US companies. Where personal data is transferred to the USA (in particular Apple for Sign in with
+  Apple, APNs, map/place-search queries, and GitHub for this website), we rely on an EU Commission adequacy decision under
+  the EU-US Data Privacy Framework where the recipient is certified under it, and additionally on standard contractual
+  clauses under Art. 46 GDPR. The data at Supabase resides in the EU (Frankfurt).</p>
+
+  <h2>8. Retention</h2>
+  <div class="scroll">
+  <table>
+    <tr><th>Data</th><th>Retention</th></tr>
+    <tr><td>Account (id, points, settings, locale)</td><td>until the account is deleted (section 9)</td></tr>
+    <tr><td>Box coordinate</td><td>while the box is active; ~30 days after the box leaves the map the coordinate is coarsened to about 100 m</td></tr>
+    <tr><td>Box photo (masked)</td><td>file and record are deleted ~30 days after the box leaves the map</td></tr>
+    <tr><td>Hidden/quarantined photo</td><td>deleted once the moderation decision is final</td></tr>
+    <tr><td>Confirmations, takes, points ledger</td><td>until account deletion or until the related box is deleted</td></tr>
+    <tr><td>Saved searches</td><td>until you delete them or the account is deleted</td></tr>
+    <tr><td>Push token</td><td>until account deletion or until Apple reports it invalid</td></tr>
+    <tr><td>Reports (resolved)</td><td>kept for the review/audit trail; the reporter’s id is removed if they delete their account</td></tr>
+    <tr><td>Form reports (website)</td><td>kept for the review/audit trail (incl. an optionally given name); abuse count/IP hash deleted after at most 2 days</td></tr>
+    <tr><td>Feedback (message, optional email, context)</td><td>12 months; deleted together with your account</td></tr>
+    <tr><td>On-site coordinate (confirmation/take)</td><td>not stored server-side; on the device only until upload</td></tr>
+  </table>
+  </div>
+  <p>A box leaves the map only through: two “empty” votes from different people within 24 h, a moderation decision, or 14
+  days with no event.</p>
+
+  <h2>9. Deleting your account</h2>
+  <p>You can delete your account at any time in the app (Profile → Settings), including a purely anonymous account. Your
+  personal records (confirmations, takes, saved searches, push token, reports, points, hidden posters, any Apple link) are
+  deleted and any Apple grant is revoked at Apple. <strong>Boxes you posted stay on the map, anonymised</strong> (the link
+  to your account is removed) so the map is not torn up; their photos are not deleted at that moment but go by the normal
+  expiry path (box leaves the map → after ~30 days). So an anonymised box’s photo is never kept longer than any other box’s.</p>
+
+  <h2>10. Your rights</h2>
+  <p>Under the GDPR you have the right to: access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction
+  (Art. 18), data portability (Art. 20), and to <strong>object</strong> to processing based on Art. 6(1)(f) GDPR on grounds
+  relating to your particular situation (Art. 21).</p>
+  <p>To exercise a right, a message to <a href="mailto:sec0nd.chance.app.mine@gmail.com">sec0nd.chance.app.mine@gmail.com</a>
+  is enough. As the accounts are pseudonymous (no names/email), we may have to ask you for details that let us identify your
+  account; otherwise we may be unable to fulfil a request (Art. 11 GDPR).</p>
+  <p>You also have the right to lodge a complaint with a supervisory authority (Art. 77 GDPR). The authority competent for us
+  is:</p>
+  <div class="panel tint">
+    <p>Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW)<br>
+    Kavalleriestraße 2–4<br>
+    40213 Düsseldorf, Germany<br>
+    <a href="https://www.ldi.nrw.de" rel="noopener">www.ldi.nrw.de</a></p>
+  </div>
+
+  <h2>11. No automated individual decision-making</h2>
+  <p>There is no automated individual decision-making within the meaning of Art. 22 GDPR and no profiling. The only
+  automated processing is the on-device masking of faces, people and plate-like text on photos (section 4.3); it protects
+  third parties and produces no legal effect concerning you.</p>
+
+  <h2>12. No tracking; access to your device (§ 25 TDDDG)</h2>
+  <p>The app contains no tracking, advertising or analytics technology and no App Tracking Transparency dialog. This website
+  sets no cookies, loads no external fonts, scripts or third-party content and embeds no trackers.</p>
+  <p>Access to your device under § 25 TDDDG (German Telecommunications-Digital-Services Data Protection Act): the app only
+  stores or reads information on your device that is strictly necessary for the functions you have explicitly requested (app
+  settings, a short-lived offline queue, a photo cache and — only if you enable notifications — your device’s push token).
+  This is permitted without separate consent under <strong>§ 25(2) no. 2 TDDDG</strong>; the push token is moreover used only
+  after you grant notifications in iOS. No cookies or comparable techniques are used for analytics or advertising purposes.</p>
+
+  <h2>13. Changes</h2>
+  <p>We adapt this policy when processing changes. The version published on this page, with the date and version shown above,
+  applies.</p>
+</main>
+
+<footer class="site">
+  <p>Second Chance · <a href="index.html">Home</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> ·
+    <a href="imprint.html">Imprint</a></p>
+  <p>Contact: <a href="mailto:sec0nd.chance.app.mine@gmail.com">sec0nd.chance.app.mine@gmail.com</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>Second Chance – free giveaway boxes in Aachen</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<p class="langbar" style="margin-top:12px">Language: <a href="../index.html">Deutsch</a> · <strong>English</strong></p>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Second <span style="color:var(--primary)">Chance</span></h1>
+    <p class="pitch">A free, ad-free map of the “zu verschenken” giveaway boxes on the streets of Aachen — photograph,
+    find, keep current.</p>
+    <p class="meta">iOS app · no tracking · no ads</p>
+  </section>
+
+  <h2>Legal</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Privacy</h3>
+      <p>What data is processed — and what deliberately isn’t.</p>
+      <a href="privacy.html">English</a><a href="../datenschutz.html">Deutsch</a>
+    </div>
+    <div class="card">
+      <h3>Terms of Use</h3>
+      <p>Posting rules, rights in photos, liability, moderation.</p>
+      <a href="terms.html">English</a><a href="../nutzungsbedingungen.html">Deutsch</a>
+    </div>
+    <div class="card">
+      <h3>Imprint</h3>
+      <p>Provider and contact under § 5 DDG.</p>
+      <a href="imprint.html">English</a><a href="../impressum.html">Deutsch</a>
+    </div>
+    <div class="card">
+      <h3>Contact</h3>
+      <p>Questions about the app or privacy.</p>
+      <a href="mailto:sec0nd.chance.app.mine@gmail.com">sec0nd.chance.app.mine@gmail.com</a>
+    </div>
+  </div>
+
+  <h2 id="report">Report content</h2>
+  <div class="panel" id="kontakt">
+    <p><strong>Using the app?</strong> Report a box or photo in the app via the report function (⋯ on the box). A privacy
+    report hides the photo immediately.</p>
+    <p><strong>Not an app user</strong> and want a photo or box taken down — e.g. because you or your vehicle appear in it?
+    Use the contact form below (notice-and-action under Art. 16 of the Digital Services Act). You can also
+    <a href="mailto:sec0nd.chance.app.mine@gmail.com?subject=Report%20content">email us</a>.</p>
+
+    <form class="form" id="reportForm" novalidate>
+      <div class="field">
+        <label for="r-reason">Reason <span class="req">*</span></label>
+        <select id="r-reason" name="reason" required>
+          <option value="">Please choose …</option>
+          <option value="people_visible">Person, number plate or name visible</option>
+          <option value="inappropriate">Inappropriate or prohibited photo</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="r-street">Street / location of the box (optional)</label>
+        <input type="text" id="r-street" name="street" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="r-desc">Description <span class="req">*</span></label>
+        <textarea id="r-desc" name="description" required minlength="10" maxlength="2000"></textarea>
+      </div>
+      <div class="field">
+        <label for="r-name">Name (optional)</label>
+        <input type="text" id="r-name" name="reporter_name" autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="r-email">Email address for our reply <span class="req">*</span></label>
+        <input type="email" id="r-email" name="email" required autocomplete="email">
+      </div>
+      <div class="field check">
+        <input type="checkbox" id="r-gf" name="good_faith" required>
+        <label for="r-gf">I confirm that, to the best of my knowledge, the information is accurate and complete.
+          <span class="req">*</span></label>
+      </div>
+      <div class="hp" aria-hidden="true">
+        <label for="r-website">Website (please leave empty)</label>
+        <input type="text" id="r-website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+      <p class="formstatus" id="r-status" role="status" aria-live="polite" hidden></p>
+      <button type="submit" class="btn" id="r-submit">Send report</button>
+      <noscript>
+        <p class="formstatus err">The form needs JavaScript. Without it, please email
+        <a href="mailto:sec0nd.chance.app.mine@gmail.com?subject=Report%20content">sec0nd.chance.app.mine@gmail.com</a>.</p>
+      </noscript>
+    </form>
+    <p class="note">Your report goes directly to our server function at Supabase (EU, Frankfurt); no cookies are set and
+    no third parties are embedded. We review every report (target: within 48 hours) and reply to the email address you
+    give. More in the <a href="terms.html#report">Terms of Use</a> and the <a href="privacy.html">Privacy Policy</a>.</p>
+  </div>
+</main>
+
+<script>
+(function () {
+  var EP = "https://uezqbfteyuswaourjtak.supabase.co/functions/v1/report-content";
+  var KEY = "sb_publishable_GLfWHHXXpy1Ticgd5DYAEQ_RHzm88rv";
+  var form = document.getElementById("reportForm");
+  if (!form) return;
+  var statusEl = document.getElementById("r-status");
+  var btn = document.getElementById("r-submit");
+  function show(kind, msg) {
+    statusEl.className = "formstatus " + kind;
+    statusEl.textContent = msg;
+    statusEl.hidden = false;
+  }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (form.website.value) { show("ok", "Thanks, your report has been received."); form.reset(); return; }
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    btn.disabled = true;
+    show("ok", "Sending …");
+    fetch(EP, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "apikey": KEY },
+      body: JSON.stringify({
+        reason: form.reason.value,
+        street: form.street.value,
+        description: form.description.value,
+        name: form.reporter_name.value,
+        email: form.email.value,
+        good_faith: form.good_faith.checked,
+        website: form.website.value
+      })
+    }).then(function (res) {
+      if (res.status === 429) {
+        show("err", "Too many reports in a short time. Please try again later or email us.");
+        btn.disabled = false; return;
+      }
+      if (!res.ok) { throw new Error("status " + res.status); }
+      show("ok", "Thanks! Your report has been received. We’ll reply to the email address you gave.");
+      form.reset();
+    }).catch(function () {
+      show("err", "That didn’t work. Please try again later or email sec0nd.chance.app.mine@gmail.com.");
+      btn.disabled = false;
+    });
+  });
+})();
+</script>
+
+<footer class="site">
+  <p>Second Chance · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="imprint.html">Imprint</a> ·
+    <a href="../index.html">Deutsch</a></p>
+  <p>Font: “Fusion Pixel 10px Proportional JP” by TakWolf, based on Ark Pixel Font, under the SIL Open Font License 1.1
+    (<a href="../fonts/FusionPixel-OFL.txt">OFL</a>, <a href="../fonts/FusionPixel-ArkPixel-OFL.txt">Ark Pixel OFL</a>).</p>
+</footer>
+</body>
+</html>

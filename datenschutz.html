@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>Datenschutzerklärung – Second Chance</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="index.html">Second <b>Chance</b></a>
+  <nav>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="nutzungsbedingungen.html">Nutzung</a>
+    <a href="impressum.html">Impressum</a>
+  </nav>
+</header>
+<p class="langbar">Sprache: <strong>Deutsch</strong> · <a href="en/privacy.html">English</a></p>
+
+<main class="wrap">
+  <h1>Datenschutzerklärung</h1>
+  <p class="meta">Stand: 12. November 2026 · Version 1.2</p>
+
+  <p class="lede">Second Chance ist eine kostenlose, werbefreie iOS-App, die „zu verschenken“-Kisten
+  auf der Straße in Aachen auf einer Karte zeigt. Diese Erklärung beschreibt, welche personenbezogenen
+  Daten dabei verarbeitet werden, auf welcher Rechtsgrundlage und wie lange. Sie ist bewusst knapp und
+  ehrlich gehalten: Es wird nichts versprochen, was die App nicht tatsächlich tut.</p>
+
+  <h2>1. Verantwortlicher</h2>
+  <div class="panel">
+    <p>Pablo Dibildox<br>
+    Hauptstraße 76<br>
+    52066 Aachen<br>
+    Deutschland</p>
+    <p>E-Mail: <a href="mailto:sec0nd.chance.app.mine@gmail.com">sec0nd.chance.app.mine@gmail.com</a></p>
+  </div>
+  <p>Es gibt keinen gesonderten Datenschutzbeauftragten; eine gesetzliche Pflicht dazu besteht für dieses
+  Angebot nicht. Bei Fragen zum Datenschutz wenden Sie sich bitte an die oben genannte E-Mail-Adresse.</p>
+
+  <h2>2. Überblick: Was die App bewusst <em>nicht</em> tut</h2>
+  <ul>
+    <li>Keine Werbung, kein Tracking, keine Analyse- oder Absturzberichts-SDKs (kein Firebase, Sentry,
+      Crashlytics, Mixpanel, kein IDFA, kein App-Tracking-Transparency-Dialog).</li>
+    <li>Kein Name und keine E-Mail-Adresse bei „Mit Apple anmelden“ (es werden keine Berechtigungen/Scopes
+      angefordert, Apple übermittelt daher weder Namen noch E-Mail).</li>
+    <li>Kein Standortverlauf wird gespeichert.</li>
+    <li>Keine Preise, keine Gegenstandsnamen, kein Chat zwischen Nutzern.</li>
+    <li>Die Identität einer Person, die eine Kiste gemeldet, bestätigt oder gemeldet hat, wird anderen
+      Nutzern niemals angezeigt.</li>
+  </ul>
+
+  <h2>3. Konten: anonym und optional mit Apple</h2>
+  <p>Beim ersten Start legt die App im Hintergrund ein <strong>anonymes Konto</strong> an (eine zufällige
+  Kennung/UUID bei unserem Dienstleister Supabase). Ohne Anmeldung und ohne Namen können Sie damit die Karte
+  ansehen, Kisten bestätigen („Noch was drin“ / „Leer“), eine Mitnahme festhalten, Suchaufträge anlegen und
+  Benachrichtigungen erhalten.</p>
+  <p>Nur um <strong>selbst eine Kiste zu posten</strong>, ist „Mit Apple anmelden“ nötig. Dabei wird die
+  Apple-Identität mit Ihrem bestehenden anonymen Konto verknüpft (gleiche Kennung, gleiche Punkte, gleiche
+  Historie). Apple übermittelt uns dabei nur eine anonyme Apple-Nutzerkennung – <strong>keinen Namen und keine
+  E-Mail-Adresse</strong>.</p>
+  <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Bereitstellung der von Ihnen genutzten
+  Funktionen und Durchführung des Nutzungsverhältnisses).</p>
+
+  <h2>4. Verarbeitungen im Einzelnen</h2>
+  <p>Für jede Verarbeitung nennen wir Zweck, die betroffenen Daten und die Rechtsgrundlage.</p>
+
+  <h3>4.1 Karte anzeigen</h3>
+  <p><strong>Zweck:</strong> die Karte und die Kisten darstellen. Dabei werden Kartenkacheln vom Anbieter
+  OpenFreeMap geladen (siehe Abschnitt 6). Technisch bedingt wird dabei Ihre IP-Adresse an diesen Anbieter
+  übertragen und der angezeigte Kartenausschnitt abgefragt.<br>
+  <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Bereitstellung der Kartenfunktion) sowie
+  Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer funktionierenden Kartendarstellung).</p>
+  <p>Anbieter von OpenFreeMap ist die <strong>Hyperknot Software Kft. (Ungarn, EU)</strong>; die Auslieferung
+  erfolgt über dedizierte Server, teilweise über Cloudflare als Content-Delivery-Netzwerk (CDN). OpenFreeMap
+  speichert nach eigenen Angaben <strong>keine IP-Adressen in den Zugriffsprotokollen</strong>; IP-Adressen können in
+  Fehlerprotokollen bis zu 7 Tage und bei Sicherheitsvorfällen bis zu 30 Tage gespeichert werden. OpenFreeMap sitzt
+  in der EU; es liegt insoweit keine Drittlandübermittlung vor.</p>
+
+  <h3>4.1a Ortssuche und Adressen</h3>
+  <p><strong>Zweck:</strong> Orte und Adressen finden. Wenn Sie im Kartensuchfeld tippen, wird Ihre Eingabe zur
+  Ortssuche an Apple (MapKit, <code>MKLocalSearch</code>) übermittelt. Beim Posten wird die Koordinate der Kiste an
+  Apple übergeben, um den Straßennamen zu ermitteln (Reverse-Geocoding); beim Tippen auf „Route“ wird die Koordinate
+  an die Karten-App übergeben.<br>
+  <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO.</p>
+
+  <h3>4.2 Standort</h3>
+  <p>Die App nutzt Ihren Standort <strong>nur während der Nutzung</strong> („Beim Verwenden der App“, iOS-Berechtigung),
+  und zwar für drei Zwecke: die Karte auf Sie zentrieren, beim Posten den Ort der Kiste bestimmen, und bei einer
+  Bestätigung oder Mitnahme prüfen, ob Sie tatsächlich <em>vor Ort</em> sind (≤ 100 m, Genauigkeit ≤ 65 m).</p>
+  <ul>
+    <li><strong>Was gespeichert wird:</strong> beim Posten die <em>Koordinate der Kiste</em> (diese ist öffentlich,
+      denn das ist der Zweck der App). Beim Zentrieren der Karte und bei der Vor-Ort-Prüfung wird Ihr Standort
+      <strong>nicht</strong> auf dem Server gespeichert; die Koordinate der Bestätigung/Mitnahme wird nur zur Prüfung an den
+      Server übergeben und dort <strong>nicht</strong> abgelegt.</li>
+    <li><strong>Was nicht passiert:</strong> es wird <strong>kein Standortverlauf</strong> gespeichert und Ihr Standort
+      wird mit niemandem geteilt. Die „Immer“-Standortberechtigung wird in dieser Version <strong>nicht</strong> angefordert.</li>
+    <li>Auf dem Gerät kann eine bei fehlender Verbindung noch nicht übertragene Bestätigung/Mitnahme kurzzeitig in einer
+      lokalen Warteschlange liegen (inkl. der Vor-Ort-Koordinate); dieser Eintrag wird gelöscht, sobald die Aktion
+      verarbeitet wurde. Er verlässt das Gerät nur als die oben beschriebene Prüfanfrage.</li>
+  </ul>
+  <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Kartenzentrierung, Posten, Vor-Ort-Prüfung als
+  Kernfunktionen) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an Schutz vor Missbrauch/Manipulation
+  der Vor-Ort-Prüfung).</p>
+
+  <h3>4.3 Fotos von Kisten – auch Fotos mit Dritten</h3>
+  <p>Beim Posten machen Sie mit der In-App-Kamera ein Foto der Kiste. Ein solches Foto kann unbeabsichtigt eine
+  vorbeigehende Person, ein Kfz-Kennzeichen oder ein Klingel-/Namensschild zeigen – all das sind personenbezogene
+  Daten.</p>
+  <ul>
+    <li><strong>Maskierung auf dem Gerät vor dem Hochladen:</strong> Direkt nach dem Auslösen erkennt die App auf
+      dem Gerät (Apple-Vision-Technik) Gesichter, Personen und kennzeichenähnliche Textzeilen und überdeckt diese
+      Bereiche <strong>deckend</strong> (keine Weichzeichnung, keine feine Verpixelung, die rückgängig gemacht werden
+      könnten). Sie können im Schritt davor weitere Bereiche selbst überdecken.</li>
+    <li><strong>Nur das maskierte Foto wird hochgeladen.</strong> Das unmaskierte Original bleibt ausschließlich im
+      Arbeitsspeicher des Geräts; es wird nicht auf die Festplatte, in einen Cache, die Fotomediathek, Protokolle oder
+      Absturzberichte geschrieben und verworfen, sobald der Vorgang endet oder abgebrochen wird.</li>
+    <li><strong>Metadaten:</strong> Alle EXIF-Daten (insbesondere GPS) werden vor dem Hochladen entfernt. Das Foto wird
+      auf dem Gerät verkleinert/komprimiert.</li>
+    <li><strong>Wo das Foto liegt:</strong> Das maskierte Foto wird in einem öffentlichen Speicher („box-photos“ bei
+      Supabase, EU-Region Frankfurt) abgelegt und ist über die Karte für alle sichtbar. Das ist beabsichtigt – ein
+      Kistenfoto soll öffentlich sein.</li>
+  </ul>
+  <p><strong>Rechtsgrundlage:</strong> Für das Veröffentlichen des (maskierten) Kistenfotos und die Verarbeitung
+  etwaiger darauf trotz Maskierung verbliebener Daten Dritter: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am
+  Betrieb des Verschenk-Karten-Dienstes, abgewogen gegen die Rechte Dritter, wobei die geräteseitige Maskierung,
+  EXIF-Entfernung und die schnelle Entfernung auf Meldung die Schutzmaßnahmen sind). Für die Bereitstellung Ihres
+  eigenen Beitrags: Art. 6 Abs. 1 lit. b DSGVO.</p>
+  <p class="note">Hinweis zur automatischen Maskierung: Die Erkennung und Überdeckung erfolgt automatisiert auf Ihrem
+  Gerät. Es handelt sich um eine Schutzmaßnahme, nicht um eine Entscheidung mit rechtlicher Wirkung Ihnen gegenüber
+  (keine automatisierte Entscheidung im Sinne von Art. 22 DSGVO, kein Profiling). Die Erkennung kann nicht alle Fälle
+  erfassen; sie ist bewusst eher zu großzügig als zu knapp eingestellt.</p>
+
+  <h3>4.4 Beiträge: Bestätigungen und Mitnahmen</h3>
+  <p><strong>Zweck:</strong> die Karte aktuell halten (wie frisch eine Kiste ist, ob sie leer ist). Gespeichert wird
+  die Tatsache einer Bestätigung („Noch was drin“/„Leer“) bzw. einer Mitnahme, verknüpft mit Ihrer Kontokennung und
+  dem Zeitpunkt – <strong>nicht</strong> die Koordinate des Antippens (siehe 4.2). Diese Angaben sind für andere Nutzer nicht
+  einsehbar; sie fließen nur in aggregierter Form in die Anzeige ein.<br>
+  <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO.</p>
+
+  <h3>4.5 Suchaufträge</h3>
+  <p><strong>Zweck:</strong> Sie legen einen Suchauftrag an (Kategorien + ein Mittelpunkt + ein Radius), um informiert
+  zu werden, wenn eine passende Kiste auftaucht. Der Mittelpunkt ist eine von Ihnen gewählte, möglicherweise sensible
+  Koordinate (z. B. in der Nähe Ihrer Wohnung). Er wird nur in Ihrem eigenen Konto gespeichert und serverseitig allein
+  zum Abgleich mit neuen Kisten gelesen.<br>
+  <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO.</p>
+
+  <h3>4.6 Push-Benachrichtigungen</h3>
+  <p>Wenn Sie Benachrichtigungen erlauben, registriert die App ein Gerätetoken bei Apple Push Notification service
+  (APNs) und speichert es bei Supabase. Taucht eine zu einem Ihrer Suchaufträge passende Kiste auf, sendet eine
+  Serverfunktion über APNs eine Benachrichtigung. Deren Text enthält nur eine Kategorie und eine gerundete
+  Entfernung (z. B. „Bücher in 300 m“) – niemals die Identität der postenden Person, keine genauen Koordinaten und
+  keine Gegenstandsnamen.</p>
+  <p>Push-Benachrichtigungen erhalten Sie nur, wenn Sie <strong>(1)</strong> in iOS Mitteilungen für die App erlauben
+  <strong>und (2)</strong> selbst einen Suchauftrag anlegen; beides können Sie jederzeit widerrufen bzw. löschen.</p>
+  <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Zustellung der von Ihnen eingerichteten
+  Suchauftrags-Treffer). Die Zustellung setzt zusätzlich Ihre iOS-Systemberechtigung für Mitteilungen voraus, die Sie
+  jederzeit in den iOS-Einstellungen widerrufen können; damit endet der Versand. Ein von APNs als ungültig gemeldetes
+  Token wird gelöscht.</p>
+
+  <h3>4.7 Meldungen und Moderation</h3>
+  <p>Sie können eine Kiste oder ein Foto melden (Grund + optionale Notiz). Eine Datenschutz-Meldung (Grund: Personen,
+  Kennzeichen oder Namen erkennbar) verbirgt das Foto sofort und verschiebt es in einen privaten Quarantäne-Speicher.
+  Wir prüfen jede Meldung (Ziel: innerhalb von 48 Stunden) und entscheiden: Foto wiederherstellen, Foto löschen (Kiste
+  bleibt), Kiste entfernen, oder die postende Person sperren. Die Entscheidung wird auf der Meldung dokumentiert.</p>
+  <p>Für Ihre Meldung in der App speichern wir den Grund, die Notiz, Ihre Kontokennung, Zeitpunkt und die Entscheidung.
+  Gegenüber der postenden Person ist Ihre Meldung anonym.</p>
+  <p>Personen <strong>ohne</strong> die App können einen Inhalt über das <strong>Kontaktformular</strong> auf der Website
+  melden (<a href="index.html#kontakt">Formular</a>). In diesem Fall speichern wir die angegebene
+  <strong>Kontakt-E-Mail</strong> (um antworten zu können), den <strong>Grund</strong>, eine <strong>Beschreibung</strong>,
+  – soweit angegeben – die <strong>Straße/den Ort</strong> der Kiste sowie <strong>optional einen Namen</strong> (zur
+  Angabe des Melders nach Art. 16 Abs. 2 des Digital Services Act; die Angabe des Namens ist freiwillig). Außerdem
+  verarbeiten wir zur Missbrauchsvermeidung kurzzeitig einen Zählwert pro E-Mail sowie einen <strong>gesalzenen Hash
+  (SHA-256) der IP-Adresse</strong> (die IP-Adresse selbst wird nicht gespeichert). Das Formular setzt keine Cookies und
+  bindet keine Drittanbieter ein; die Übertragung geht direkt an unsere Serverfunktion bei Supabase (EU, Frankfurt). Die
+  Formular-Meldungen (einschließlich eines angegebenen Namens) bewahren wir für den Prüf- und Nachweiszweck auf; den
+  Missbrauchs-Zählwert/IP-Hash löschen wir nach spätestens 2 Tagen.</p>
+  <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. c DSGVO (Melde- und Abhilfeverfahren nach Art. 16 des Digital
+  Services Act) und Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Entfernung rechtsverletzender Inhalte und
+  am Schutz Dritter; bei der Kontakt-E-Mail auch zur Beantwortung der Meldung).</p>
+
+  <h3>4.8 Personen ausblenden</h3>
+  <p>Sie können Kisten einer bestimmten postenden Person ausblenden. Technisch wird dazu ein Paar aus Ihrer und der
+  (serverseitig ermittelten) Kontokennung der anderen Person gespeichert; Sie erfahren dabei nie, wer die Person ist.<br>
+  <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b und lit. f DSGVO.</p>
+
+  <h3>4.9 Punkte, Einstellungen, Sprache</h3>
+  <p>Zu Ihrem Konto gehören noch: Beitragspunkte (Spielelement), Ihre Benachrichtigungs-Einstellungen, die akzeptierte
+  Version der Posting-Regeln und Ihre Sprach-/Locale-Einstellung (damit Benachrichtigungen in der richtigen Sprache
+  kommen). Diese Daten sind nur Ihrem Konto zugeordnet.<br>
+  <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO.</p>
+
+  <h3>4.10 Feedback</h3>
+  <p><strong>Zweck:</strong> Über „Feedback geben“ (Profil) können Sie uns eine kurze Nachricht mit einer Idee, einem
+  Problem oder Lob senden; eine E-Mail-Adresse für eine Antwort ist optional. Gespeichert werden das Thema, Ihre
+  Nachricht, die optionale Kontakt-E-Mail, ein technischer Kontext (App-Version, iOS-Version, Gerätemodell und
+  Spracheinstellung) sowie Ihre Kontokennung. Das Gerätemodell ist die <strong>Hardware-Kennung</strong> (z. B.
+  „iPhone16,1“), <strong>nicht</strong> Ihr Gerätename. Die Kontokennung dient einem Tageslimit und dazu, dass Ihr
+  Feedback zusammen mit Ihrem Konto gelöscht wird. Ihr Feedback ist nur für den Betreiber sichtbar; es wird niemandem
+  angezeigt und nicht per E-Mail weitergeleitet.<br>
+  <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Verbesserung der App und
+  an der Beantwortung Ihrer Nachricht); die optionale E-Mail-Adresse geben Sie freiwillig an.<br>
+  <strong>Speicherdauer:</strong> 12 Monate; bei Löschung Ihres Kontos wird das Feedback mitgelöscht.</p>
+
+  <h2>5. Herkunft und Weitergabe: Fotos Dritter</h2>
+  <p>Teilweise verarbeiten wir Daten, die nicht von Ihnen selbst stammen: nämlich Personen oder Fahrzeuge, die
+  unbeabsichtigt auf einem Kistenfoto zu sehen sein könnten (Art. 14 DSGVO). Diese Daten werden – wenn sie der
+  automatischen und manuellen Maskierung entgehen – auf der öffentlichen Karte gezeigt. Wir begegnen dem durch
+  geräteseitige Maskierung vor dem Hochladen, EXIF-Entfernung und ein schnelles Entfernen auf Meldung (Abschnitt 4.7).
+  Betroffene Dritte können sich jederzeit an uns wenden (Abschnitt 1) oder den Inhalt melden (Website-Startseite);
+  wir entfernen betroffene Fotos.</p>
+  <p>Eine individuelle Benachrichtigung solcher zufällig abgebildeten Personen ist uns nicht möglich bzw. nur mit
+  unverhältnismäßigem Aufwand (wir kennen ihre Identität und Kontaktdaten nicht); wir berufen uns insoweit auf
+  <strong>Art. 14 Abs. 5 lit. b DSGVO</strong> und stellen diese Informationen stattdessen öffentlich bereit und
+  entfernen betroffene Fotos auf Meldung unverzüglich.</p>
+
+  <h2>6. Empfänger und Auftragsverarbeiter</h2>
+  <div class="scroll">
+  <table>
+    <tr><th>Empfänger</th><th>Rolle</th><th>Was übermittelt wird</th><th>Sitz / Region</th></tr>
+    <tr><td>Supabase (Supabase Inc.)</td><td>Auftragsverarbeiter (Hosting: Datenbank, Authentifizierung, Speicher, Serverfunktionen)</td><td>Alle serverseitig gespeicherten Daten dieser Erklärung</td><td>EU-Region Frankfurt (eu-central-1); Unternehmenssitz USA</td></tr>
+    <tr><td>Apple (Apple Inc. / Apple Distribution International)</td><td>Eigenständig Verantwortlicher bzw. Dienstleister, je nach Funktion</td><td>„Mit Apple anmelden“ (anonyme Kennung); Push über APNs (Gerätetoken + Benachrichtigungstext); Ortssuche (eingegebener Suchbegriff) und Reverse-Geocoding/Routing (Koordinate)</td><td>USA / EU</td></tr>
+    <tr><td>OpenFreeMap (Hyperknot Software Kft.)</td><td>Dritter (Kartenkachel-Anbieter); ggf. Cloudflare als CDN</td><td>IP-Adresse und angezeigter Kartenausschnitt beim Laden der Kacheln</td><td>EU (Ungarn)</td></tr>
+    <tr><td>GitHub (GitHub, Inc. / Microsoft)</td><td>Dritter (Hosting dieser Website)</td><td>IP-Adresse der Website-Besucher in den Server-Logs</td><td>USA</td></tr>
+  </table>
+  </div>
+  <p>Mit Supabase besteht ein <strong>Auftragsverarbeitungsvertrag (AVV) nach Art. 28 DSGVO</strong>. Dieser ist in die
+  Nutzungsbedingungen (Terms of Service) von Supabase als Datenverarbeitungs-Nachtrag einbezogen; ein gesondert
+  unterzeichneter Vertrag existiert nicht. Supabase setzt im Rahmen des AVV Unterauftragsverarbeiter ein. Die Daten
+  werden in der EU (Frankfurt) verarbeitet. Die App enthält keine Werbe-, Analyse- oder Tracking-Dienste Dritter.</p>
+
+  <h2>7. Übermittlung in Drittländer</h2>
+  <p>Einige Empfänger sind US-Unternehmen. Soweit dabei personenbezogene Daten in die USA übertragen werden
+  (insbesondere bei Apple für „Mit Apple anmelden“, APNs, Karten-/Ortssuche-Anfragen sowie bei GitHub für diese
+  Website), stützen wir uns auf einen Angemessenheitsbeschluss der EU-Kommission im Rahmen des EU-US Data Privacy
+  Framework, soweit der jeweilige Empfänger darunter zertifiziert ist, ergänzend auf Standardvertragsklauseln nach
+  Art. 46 DSGVO. Die Daten bei Supabase liegen in der EU (Frankfurt).</p>
+
+  <h2>8. Speicherdauer</h2>
+  <div class="scroll">
+  <table>
+    <tr><th>Daten</th><th>Dauer</th></tr>
+    <tr><td>Konto (Kennung, Punkte, Einstellungen, Locale)</td><td>bis zur Löschung des Kontos (Abschnitt 9)</td></tr>
+    <tr><td>Koordinate einer Kiste</td><td>solange die Kiste aktiv ist; ~30 Tage nachdem die Kiste von der Karte verschwindet, wird die Koordinate auf etwa 100 m vergröbert</td></tr>
+    <tr><td>Kistenfoto (maskiert)</td><td>Datei und Datensatz werden ~30 Tage nachdem die Kiste von der Karte verschwindet gelöscht</td></tr>
+    <tr><td>Verborgenes/quarantäniertes Foto</td><td>gelöscht, sobald die Moderationsentscheidung endgültig ist</td></tr>
+    <tr><td>Bestätigungen, Mitnahmen, Punkte-Ledger</td><td>bis zur Kontolöschung oder bis die zugehörige Kiste gelöscht wird</td></tr>
+    <tr><td>Suchaufträge</td><td>bis Sie sie löschen oder das Konto gelöscht wird</td></tr>
+    <tr><td>Push-Token</td><td>bis zur Kontolöschung oder bis Apple es als ungültig meldet</td></tr>
+    <tr><td>Meldungen (erledigt)</td><td>bleiben für den Prüf-/Nachweiszweck erhalten; bei Kontolöschung der meldenden Person wird deren Kennung mitgelöscht</td></tr>
+    <tr><td>Formular-Meldungen (Website)</td><td>bleiben für den Prüf-/Nachweiszweck erhalten (inkl. optional angegebenem Namen); Missbrauchs-Zählwert/IP-Hash nach spätestens 2 Tagen gelöscht</td></tr>
+    <tr><td>Feedback (Nachricht, optionale E-Mail, Kontext)</td><td>12 Monate; bei Kontolöschung mitgelöscht</td></tr>
+    <tr><td>Vor-Ort-Koordinate (Bestätigung/Mitnahme)</td><td>nicht serverseitig gespeichert; auf dem Gerät nur bis zur Übertragung</td></tr>
+  </table>
+  </div>
+  <p>Eine Kiste verschwindet von der Karte nur durch: zwei „Leer“-Meldungen verschiedener Personen innerhalb von 24 h,
+  eine Moderationsentscheidung, oder 14 Tage ohne jedes Ereignis.</p>
+
+  <h2>9. Konto löschen</h2>
+  <p>Sie können Ihr Konto jederzeit in der App löschen (Profil → Einstellungen), auch ein rein anonymes Konto. Dabei
+  werden Ihre persönlichen Datensätze (Bestätigungen, Mitnahmen, Suchaufträge, Push-Token, Meldungen, Punkte,
+  Ausblendungen, ggf. Apple-Verknüpfung) gelöscht und ein etwaiger Apple-Zugriff bei Apple widerrufen. <strong>Von Ihnen
+  gepostete Kisten bleiben anonymisiert auf der Karte</strong> (die Verknüpfung zu Ihrem Konto wird entfernt), damit die
+  Karte nicht zerrissen wird; deren Fotos werden nicht sofort, sondern über den normalen Ablauf gelöscht (Kiste
+  verschwindet → nach ~30 Tagen). So wird das Foto einer anonymisierten Kiste nicht länger aufbewahrt als das jeder
+  anderen Kiste.</p>
+
+  <h2>10. Ihre Rechte</h2>
+  <p>Sie haben nach der DSGVO das Recht auf:</p>
+  <ul>
+    <li>Auskunft (Art. 15),</li>
+    <li>Berichtigung (Art. 16),</li>
+    <li>Löschung (Art. 17),</li>
+    <li>Einschränkung der Verarbeitung (Art. 18),</li>
+    <li>Datenübertragbarkeit (Art. 20),</li>
+    <li><strong>Widerspruch</strong> gegen Verarbeitungen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO aus Gründen,
+      die sich aus Ihrer besonderen Situation ergeben (Art. 21).</li>
+  </ul>
+  <p>Zur Ausübung genügt eine Nachricht an <a href="mailto:sec0nd.chance.app.mine@gmail.com">sec0nd.chance.app.mine@gmail.com</a>.
+  Da die Konten pseudonym sind (keine Namen/E-Mail), kann es sein, dass wir Sie um Angaben bitten müssen, mit denen sich
+  Ihr Konto zuordnen lässt; andernfalls können wir ein Recht ggf. nicht erfüllen (Art. 11 DSGVO).</p>
+  <p>Sie haben außerdem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren (Art. 77 DSGVO). Zuständig
+  ist für uns:</p>
+  <div class="panel tint">
+    <p>Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW)<br>
+    Kavalleriestraße 2–4<br>
+    40213 Düsseldorf<br>
+    <a href="https://www.ldi.nrw.de" rel="noopener">www.ldi.nrw.de</a></p>
+  </div>
+
+  <h2>11. Keine automatisierte Entscheidung im Einzelfall</h2>
+  <p>Es findet keine automatisierte Entscheidung im Sinne von Art. 22 DSGVO und kein Profiling statt. Die einzige
+  automatisierte Verarbeitung ist die geräteseitige Maskierung von Gesichtern, Personen und kennzeichenähnlichem Text
+  auf Fotos (Abschnitt 4.3); dies dient dem Schutz Dritter und hat keine rechtliche Wirkung Ihnen gegenüber.</p>
+
+  <h2>12. Kein Tracking; Zugriffe auf Ihr Gerät (§ 25 TDDDG)</h2>
+  <p>Die App enthält keine Tracking-, Werbe- oder Analysetechnik und keinen App-Tracking-Transparency-Dialog. Diese
+  Website setzt keine Cookies, lädt keine externen Schriften, Skripte oder Inhalte von Drittanbietern und bindet keine
+  Tracker ein.</p>
+  <p>Zugriffe auf Ihr Gerät nach § 25 TDDDG: Die App speichert bzw. liest nur Informationen auf Ihrem Gerät, die für
+  die von Ihnen ausdrücklich gewünschten Funktionen unbedingt erforderlich sind (App-Einstellungen, eine kurzzeitige
+  Offline-Warteschlange, ein Foto-Cache sowie – nur wenn Sie Benachrichtigungen aktivieren – das Push-Token Ihres
+  Geräts). Das ist nach <strong>§ 25 Abs. 2 Nr. 2 TDDDG</strong> ohne gesonderte Einwilligung zulässig; das Push-Token
+  wird zudem erst nach Ihrer Mitteilungs-Freigabe in iOS verwendet. Es werden keine Cookies oder vergleichbaren
+  Techniken zu Analyse- oder Werbezwecken eingesetzt.</p>
+
+  <h2>13. Änderungen</h2>
+  <p>Wir passen diese Erklärung an, wenn sich die Verarbeitung ändert. Es gilt die jeweils auf dieser Seite
+  veröffentlichte Fassung mit dem oben genannten Stand und der Version.</p>
+</main>
+
+<footer class="site">
+  <p>Second Chance · <a href="index.html">Start</a> · <a href="datenschutz.html">Datenschutz</a> ·
+    <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a> · <a href="impressum.html">Impressum</a></p>
+  <p>Kontakt: <a href="mailto:sec0nd.chance.app.mine@gmail.com">sec0nd.chance.app.mine@gmail.com</a></p>
+</footer>
+</body>
+</html>

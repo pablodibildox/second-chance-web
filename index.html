@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>Second Chance – Verschenk-Kisten in Aachen</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p class="langbar" style="margin-top:12px">Sprache: <strong>Deutsch</strong> · <a href="en/index.html">English</a></p>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Second <span style="color:var(--primary)">Chance</span></h1>
+    <p class="pitch">Eine kostenlose, werbefreie Karte der „zu verschenken“-Kisten auf den Straßen von Aachen –
+    fotografieren, finden, aktuell halten.</p>
+    <p class="meta">iOS-App · kein Tracking · keine Werbung</p>
+  </section>
+
+  <h2>Rechtliches</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Datenschutz</h3>
+      <p>Welche Daten verarbeitet werden – und was bewusst nicht.</p>
+      <a href="datenschutz.html">Deutsch</a><a href="en/privacy.html">English</a>
+    </div>
+    <div class="card">
+      <h3>Nutzungsbedingungen</h3>
+      <p>Regeln fürs Posten, Rechte an Fotos, Haftung, Moderation.</p>
+      <a href="nutzungsbedingungen.html">Deutsch</a><a href="en/terms.html">English</a>
+    </div>
+    <div class="card">
+      <h3>Impressum</h3>
+      <p>Anbieter und Kontakt nach § 5 DDG.</p>
+      <a href="impressum.html">Deutsch</a><a href="en/imprint.html">English</a>
+    </div>
+    <div class="card">
+      <h3>Kontakt</h3>
+      <p>Fragen zur App oder zum Datenschutz.</p>
+      <a href="mailto:sec0nd.chance.app.mine@gmail.com">sec0nd.chance.app.mine@gmail.com</a>
+    </div>
+  </div>
+
+  <h2 id="melden">Inhalte melden · Report content</h2>
+  <div class="panel" id="kontakt">
+    <p><strong>Du nutzt die App?</strong> Dann melde eine Kiste oder ein Foto direkt in der App über die
+    „Melden“-Funktion (⋯ auf der Kiste). Eine Datenschutz-Meldung verbirgt das Foto sofort.</p>
+    <p><strong>Du nutzt die App nicht</strong> und möchtest ein Foto oder eine Kiste beanstanden – etwa weil du oder dein
+    Fahrzeug darauf zu sehen bist? Nutze das folgende Kontaktformular (zugleich Melde- und Abhilfeverfahren nach Art. 16
+    des Digital Services Act). Du kannst uns auch per
+    <a href="mailto:sec0nd.chance.app.mine@gmail.com?subject=Inhalt%20melden%20%2F%20Report%20content">E-Mail</a>
+    schreiben.</p>
+
+    <form class="form" id="reportForm" novalidate>
+      <div class="field">
+        <label for="r-reason">Grund <span class="req">*</span></label>
+        <select id="r-reason" name="reason" required>
+          <option value="">Bitte wählen …</option>
+          <option value="people_visible">Person, Kennzeichen oder Name erkennbar</option>
+          <option value="inappropriate">Unangemessenes oder verbotenes Foto</option>
+          <option value="other">Sonstiges</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="r-street">Straße / Ort der Kiste (optional)</label>
+        <input type="text" id="r-street" name="street" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="r-desc">Beschreibung <span class="req">*</span></label>
+        <textarea id="r-desc" name="description" required minlength="10" maxlength="2000"></textarea>
+      </div>
+      <div class="field">
+        <label for="r-name">Name (optional)</label>
+        <input type="text" id="r-name" name="reporter_name" autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="r-email">E-Mail-Adresse für die Antwort <span class="req">*</span></label>
+        <input type="email" id="r-email" name="email" required autocomplete="email">
+      </div>
+      <div class="field check">
+        <input type="checkbox" id="r-gf" name="good_faith" required>
+        <label for="r-gf">Ich versichere nach bestem Wissen, dass meine Angaben richtig und vollständig sind.
+          <span class="req">*</span></label>
+      </div>
+      <div class="hp" aria-hidden="true">
+        <label for="r-website">Website (bitte leer lassen)</label>
+        <input type="text" id="r-website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+      <p class="formstatus" id="r-status" role="status" aria-live="polite" hidden></p>
+      <button type="submit" class="btn" id="r-submit">Meldung senden</button>
+      <noscript>
+        <p class="formstatus err">Das Formular benötigt JavaScript. Ohne JavaScript schreib uns bitte per E-Mail an
+        <a href="mailto:sec0nd.chance.app.mine@gmail.com?subject=Inhalt%20melden">sec0nd.chance.app.mine@gmail.com</a>.</p>
+      </noscript>
+    </form>
+    <p class="note">Deine Meldung geht direkt an unsere Serverfunktion bei Supabase (EU, Frankfurt); es werden keine
+    Cookies gesetzt und keine Drittanbieter eingebunden. Wir prüfen jede Meldung (Ziel: innerhalb von 48 Stunden) und
+    melden uns über die angegebene E-Mail-Adresse zurück. Mehr dazu in den
+    <a href="nutzungsbedingungen.html#melden">Nutzungsbedingungen</a> und der
+    <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+  </div>
+
+  <h2 id="report">Report content (English)</h2>
+  <div class="panel tint">
+    <p><strong>Using the app?</strong> Report a box or photo in the app via “Melden” (⋯ on the box). A privacy report
+    hides the photo immediately.</p>
+    <p><strong>Not an app user</strong> and want a photo or box taken down — e.g. because you or your car appear in it?
+    Use the <a href="en/index.html#kontakt">contact form (English)</a>, the
+    <a href="#kontakt">form above</a>, or email
+    <a href="mailto:sec0nd.chance.app.mine@gmail.com?subject=Report%20content">sec0nd.chance.app.mine@gmail.com</a>.
+    We review every report (target: within 48 hours).</p>
+  </div>
+</main>
+
+<script>
+(function () {
+  var EP = "https://uezqbfteyuswaourjtak.supabase.co/functions/v1/report-content";
+  var KEY = "sb_publishable_GLfWHHXXpy1Ticgd5DYAEQ_RHzm88rv";
+  var form = document.getElementById("reportForm");
+  if (!form) return;
+  var statusEl = document.getElementById("r-status");
+  var btn = document.getElementById("r-submit");
+  function show(kind, msg) {
+    statusEl.className = "formstatus " + kind;
+    statusEl.textContent = msg;
+    statusEl.hidden = false;
+  }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (form.website.value) { show("ok", "Danke, deine Meldung ist eingegangen."); form.reset(); return; }
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    btn.disabled = true;
+    show("ok", "Wird gesendet …");
+    fetch(EP, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "apikey": KEY },
+      body: JSON.stringify({
+        reason: form.reason.value,
+        street: form.street.value,
+        description: form.description.value,
+        name: form.reporter_name.value,
+        email: form.email.value,
+        good_faith: form.good_faith.checked,
+        website: form.website.value
+      })
+    }).then(function (res) {
+      if (res.status === 429) {
+        show("err", "Zu viele Meldungen in kurzer Zeit. Bitte versuch es später noch einmal oder schreib uns per E-Mail.");
+        btn.disabled = false; return;
+      }
+      if (!res.ok) { throw new Error("status " + res.status); }
+      show("ok", "Danke! Deine Meldung ist eingegangen. Wir melden uns über die angegebene E-Mail-Adresse zurück.");
+      form.reset();
+    }).catch(function () {
+      show("err", "Das hat leider nicht geklappt. Bitte versuch es später noch einmal oder schreib uns per E-Mail an sec0nd.chance.app.mine@gmail.com.");
+      btn.disabled = false;
+    });
+  });
+})();
+</script>
+
+<footer class="site">
+  <p>Second Chance · <a href="datenschutz.html">Datenschutz</a> · <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a> ·
+    <a href="impressum.html">Impressum</a> · <a href="en/index.html">English</a></p>
+  <p>Schrift: „Fusion Pixel 10px Proportional JP“ von TakWolf, auf Basis von Ark Pixel Font, unter der SIL Open Font
+    License 1.1 (<a href="fonts/FusionPixel-OFL.txt">OFL</a>, <a href="fonts/FusionPixel-ArkPixel-OFL.txt">Ark Pixel OFL</a>).</p>
+</footer>
+</body>
+</html>
